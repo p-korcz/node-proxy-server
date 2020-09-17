@@ -46,7 +46,10 @@ detectPort(outPort).then((freePort) => {
     `);
 
       res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+      res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, PATCH, POST, PUT, DELETE"
+      );
     });
     proxy.on("proxyReq", (proxyReq) => {
       console.log(`
